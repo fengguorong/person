@@ -1,0 +1,530 @@
+@import "var.less";
+*{
+  box-sizing: border-box;margin: 0;padding: 0;list-style: none;height:100%;width:100%;
+}
+a{
+  text-decoration: none;
+}
+//小屏
+.container{
+  &{
+    width:100%;
+  }
+  &>.row{
+    width: 100%;
+    .clear;
+  }
+  &-fluid{
+    width:100%;
+  }
+  &-fluid>.row {
+    width: 100%;.clear;
+  }
+}
+.head{
+  width:100%;
+  height:100%;
+  margin: auto;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.usethis{
+  width:100%;
+  height: 11%;
+  margin:0 auto;
+}
+.use{
+  display: block;
+  width:30%;
+  height:16%;
+  font-size: 60px;
+  line-height: 50%;
+  text-align: right;
+  color:#000;
+  float: left;
+  padding: 3% 0;
+  margin-left: 25%;
+  font-family: "Leelawadee";
+  transition: all 1s ease;
+  //margin-top: 10%;
+}
+.use:hover{
+  transform: translate(10px,0);
+}
+.this{
+  display: block;
+  width:9%;
+  float: left;
+  font-size: 15px;
+  line-height: 5%;
+  text-align: left;
+  color:#000;
+  padding: 5% 0;
+  font-family: "Comic Sans MS";
+  //margin-top: 10%;
+}
+.mylife{
+  width:100%;
+  height:8%;
+  float: left;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color:#000;
+  padding: 1% 1%;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+}
+.icon{
+  width:100%;
+  height:50px;
+  margin: auto;
+  float: left;
+}
+.facebook:hover,.ins:hover,.weixin:hover,.email:hover{
+  transform: rotate(360deg);
+}
+.facebook{
+  display: block;
+  width:30px;
+  height:30px;
+  float: left;
+  margin-left: 30%;
+  background: url("../img/f.png") no-repeat;
+  transition: all 1s ease;
+}
+.ins{
+  display: block;
+  width:30px;
+  height:30px;
+  float: left;
+  margin-left: 2%;
+  background: url("../img/ins.png") no-repeat 0 1px;
+  transition: all 1s ease;
+}
+.weixin{
+  display: block;
+  width:30px;
+  height:30px;
+  float: left;
+  margin-left: 2%;
+  background: url("../img/wechat.png") no-repeat 0 -1px;
+  transition: all 1s ease;
+}
+.email{
+  display: block;
+  width:30px;
+  height:30px;
+  float: left;
+  margin-left: 2%;
+  background: url("../img/email.png") no-repeat;
+  transition: all 1s ease;
+}
+.hi{
+  width:100%;
+  height:10%;
+  color: #000;
+  float: left;
+  font-size: 54px;
+  margin-top: 10%;
+  padding: 0 0;
+  font-weight: bold;
+  text-align: center;
+  font-family:"Leelawadee";
+  transition: all 1s linear;
+}
+.hi:hover{
+  transform: scale(.9,.95);
+}
+.nav{
+  width:100%;
+  height:12%;
+  background: #202428;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.navs{
+  display: none;
+}
+.logo{
+  width:35%;
+  height: 100%;
+  float: left;
+}
+.uses{
+  display: block;
+  width:70%;
+  height:100%;
+  font-size: 60px;
+  line-height: 50px;
+  text-align: right;
+  color:#99DD9A;
+  float: left;
+  padding: 3% 0;
+  font-family: "Leelawadee";
+}
+.thiss{
+  display: block;
+  width:20%;
+  height: 80%;
+  float: left;
+  font-size: 15px;
+  line-height: 5px;
+  text-align: left;
+  color:#99DD9A;
+  padding-top: 10%;
+  font-family: "Comic Sans MS";
+}
+.sort{
+  width:20%;
+  height:100%;
+  color:#99DD9A;
+  font-size: 70px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  margin-right: 3%;
+  cursor: pointer;
+  position: relative;
+}
+.menu{
+  width:100%;
+  height: 550px;
+  background: #99DD9A;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  overflow: hidden;
+  display: none;
+  z-index:999;
+}
+.list{
+  width:100%;
+  height: 20%;
+  float: left;
+  font-size: 35px;
+  line-height: 100px;
+  text-align: left;
+  padding-left: 10%;
+  cursor: pointer;
+  color: #202428;
+}
+.list a{
+  width:100%;
+  height: 100%;
+  float: left;
+  font-size: 35px;
+  line-height: 100px;
+  text-align: left;
+  padding-left: 10%;
+  cursor: pointer;
+  color: #202428;
+}
+.list:hover{
+  color: #999;
+  background: #fff;
+}
+.list a:hover{
+  color: #999;
+  background: #fff;
+}
+.sorts{
+  display: none;
+}
+
+//第二屏
+.imgbox{
+  width: 100%;
+  height:90%;
+  margin: auto;
+  overflow: hidden;
+}
+.imghigh{
+  width: 100%;
+  height:50%;
+  float: left;
+}
+.img1{
+  width: 33.333%;
+  height:50%;
+  float: left;
+  display: block;
+}
+.imglow{
+  width: 100%;
+  height:50%;
+  float: left;
+}
+.img2{
+  width: 50%;
+  height:100%;
+  float: left;
+  display: block;
+}
+
+
+
+
+
+
+
+//中屏
+@media screen and (min-width:@num1){
+  .container{
+    width: 100%;
+  }
+  .loop(m);
+  .col-s-hide{
+    display: block;
+  }
+  .col-l-hide{
+    display: block;
+  }
+  .col-m-hide{
+    display: none;
+  }
+  .use{
+    font-size: 80px;
+  }
+  .this{
+    font-size: 20px;
+    padding: 4% 0;
+  }
+  .mylife{
+    font-size: 23px;
+    line-height: 23px;
+  }
+  .facebook{
+    margin-left: 40%;
+  }
+  .hi{
+    font-size: 80px;
+  }
+  .nav{
+    height:22%;
+  }
+  .uses{
+    font-size: 80px;
+    line-height: 100px;
+  }
+  .thiss{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .title{
+    font-size: 60px;
+    padding-top: 3%;
+    height: 25%
+  }
+  .self{
+    width:30%;
+    font-size: 20px;
+  }
+  .eng{
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 5%;
+  }
+  .neirong{
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .zongjie{
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .tiao{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-size: 18px;
+    height: 10%;
+  }
+  .sort{
+    line-height: 140px;
+  }
+  .sorts{
+    display: none;
+  }
+}
+
+
+
+//大屏
+@media screen and (min-width:@num2){
+  .container{
+    width: 100%;
+  }
+  .loop(l);
+  .col-s-hide{
+    display: block;
+  }
+  .col-m-hide{
+    display: block;
+  }
+  .col-l-hide{
+    display: none;
+  }
+  .usethis{
+    margin: 0;
+  }
+  .use{
+    font-size: 85px;
+    margin-top: 0;
+  }
+  .this{
+    font-size: 20px;
+    padding-top: 4%;
+    margin-top: 0;
+  }
+  .mylife{
+    font-size: 23px;
+    padding-top: 0;
+    height: 30px;
+  }
+  .facebook{
+    margin-left: 40%;
+  }
+  .hi{
+    font-size: 80px;
+  }
+  .nav{
+    display: none;
+  }
+  .navs{
+    display: block;
+    width:100%;
+    height:15%;
+    background: #202428;
+    margin: auto;
+    position: relative;
+    }
+  .logo{
+    width:35%;
+    height: 100%;
+    float: left;
+  }
+  .uses{
+    width:40%;
+    height:100%;
+    font-size: 80px;
+    line-height: 50px;
+  }
+  .thiss{
+    height: 100%;
+    font-size: 18px;
+    padding-top: 3%;
+  }
+  .left{
+    width:50%;
+  }
+  #word{
+    margin: 10% 25%;
+    width:60%;
+  }
+  .neirong{
+    line-height: 35px;
+    margin-top: 8%;
+  }
+  .title{
+    padding-top: 2%;
+  }
+  .self{
+    width:20%;
+  }
+  .neirong{
+    font-size: 17px;
+    padding-top: 0;
+  }
+  .zongjie{
+    font-size: 18px;
+  }
+  .sorts{
+    display: block;
+    width:40%;
+    height:100%;
+    float: right;
+    margin-right: 0;
+    margin-right: 3%;
+  }
+  .menus{
+    width:80%;
+    height: 100%;
+  }
+  .lists{
+    width:20%;
+    height: 100%;
+    float: left;
+    font-size: 33px;
+    line-height: 100px;
+    text-align: center;
+    cursor: pointer;
+    color: #DCFBD1;
+    transition: all 1s ease;
+  }
+  .lists:hover{
+    color: #999;
+    background: #fff;
+    transform: scale(.95,.98);
+  }
+
+
+  //第二屏
+  .imgbox{
+    width: 70%;
+    height:100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .imghigh{
+    width: 100%;
+    height:50%;
+    float: left;
+  }
+  .img1{
+    width: 33.333%;
+    height:50%;
+    float: left;
+    display: block;
+  }
+  .imglow{
+    width: 100%;
+    height:50%;
+    float: left;
+  }
+  .img2{
+    width: 50%;
+    height:100%;
+    float: left;
+    display: block;
+  }
+
+
+}
+
+.loop(@type:s,@i:1) when(@i<=@cols){
+  .container>.row>.col-@{type}-@{i}{
+    float: left;
+    width: @i/@cols*100%;
+  }
+  .container-fluid>.row>.col-@{type}-@{i}{
+    float: left;
+    width: @i/@cols*100%;
+  }
+  .loop(@type,@i+1)
+}
+.loop();
+.col-s-hide{
+  display: none;
+}
+.clear(){
+  &:before,&:after{
+    content: "";
+    display: block;
+  }
+  &:after{
+    clear: both;
+  }
+}
