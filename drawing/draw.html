@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/mycanvas.js"></script>
+    <script src="js/draw.js"></script>
+    <link rel="stylesheet" href="css/draw.css">
+</head>
+<body>
+<div class="box">
+    <div class="menu">
+        <ul class="menus">
+            <li class="file">
+                <span>文件</span>
+                <ul class="menu-list-con">
+                    <li>新建</li>
+                    <li>返回</li>
+                    <li>保存</li>
+                    <li><input type="file" value="上传图片" class="files"></li>
+                   <li><img src="" alt="" class="imgfile" hidden></li>
+                </ul>
+            </li>
+            <li class="tuexit">
+              <span>图片处理</span>
+              <ul class="tuexitlis">
+                  <li data-role="msk">马赛克</li>
+                  <li data-role="blur">模糊</li>
+                  <li data-role="fx">反相</li>
+              </ul>
+            </li>
+        </ul>
+        <ul class="draw">
+           <li class="menu-list">
+               <ul class="menu-list-con">
+                   <li class="back"><a href="javascript:;" title="返回" class="fanhui"></a></li>
+                   
+               </ul>
+           </li>
+           <li class="menu-list">
+               <span>画图</span>
+               <ul class="menu-list-con drawtool">
+                   <li data-role="line">直线</li>
+                   <li data-role="arc">圆</li>
+                   <li data-role="rect">矩形</li>
+                   <li data-role="bian">多边形</li>
+                   <li data-role="star">星形</li>
+                   <li data-role="pencil">铅笔</li>
+               </ul>
+           </li>
+           <li class="menu-list">
+               <span>颜色</span>
+               <ul class="menu-list-con">
+                   <li>fill:<input type="color" data-role="fillstyle"></li>
+                   <li>stroke：<input type="color" data-role="strokestyle"></li>
+               </ul>
+           </li>
+           <li class="menu-list">
+               <span>画图方式</span>
+               <ul class="menu-list-con">
+                   <li data-role="stroke">描边</li>
+                   <br>
+                   <li data-role="fill">填充</li>
+               </ul>
+           </li>
+           <li class="menu-list">
+               <span>线条宽度</span>
+               <ul class="menu-list-con">
+                   <li data-role="1">细</li>
+                  <li data-role="3">中</li>
+                  <li data-role="5">粗</li>
+                   <br>
+                  <li data-role="null">other:<input type="number"></li>
+               </ul>
+           </li>
+           
+           <li class="menu-list">
+               <span class="eraserobj">擦除</span>
+                <ul class="menu-list-con">
+                   <li data-role="10">小</li>
+                   <li data-role="30">中</li>
+                   <li data-role="50">大</li>
+                    <br>
+                   <li data-role="null">other:<input type="number"></li>
+               </ul>
+           </li>
+       </ul>
+    </div>
+    <div class="canvas-box">
+        <canvas width="1000" height="500"></canvas>
+        <div class="erasers"></div>
+        <div class="copy"></div>
+    </div>
+    <!-- <div class="test"><img src="" alt="" class="imgfile"></div> -->
+</div>
+</body>
+</html>

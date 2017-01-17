@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/hitPix.js"></script>
+    <script>
+        window.onload=function () {
+            var canvas=document.querySelector("canvas");
+            var cobj=canvas.getContext("2d");
+            canvas.width=document.documentElement.clientWidth;
+            canvas.height=document.documentElement.clientHeight;
+            var run=document.querySelectorAll(".per");
+            var jump=document.querySelectorAll(".pic");
+            var stop=document.querySelectorAll(".ting");
+            var hider=document.querySelectorAll(".pics");
+            var runa=document.querySelector(".runa");
+            var jumpa=document.querySelector(".jumpa");
+
+            var score=$(".score");
+            var cj=$(".fenshu")[0];
+            var start=$(".start");
+            var logo=$(".logo");
+            var end=$(".end")[0];
+            var logos=$(".logos")[0];
+            var obj=new game(canvas,cobj,run,jump,stop,hider,runa,jumpa,end,logos,cj);
+            logo.click(function () {
+                obj.play(start,logo,end,logos);
+            })
+        }
+    </script>
+</head>
+<body>
+<audio src="audio/beijing.mp3" loop class="runa"></audio>
+<audio src="audio/jump.mp3" class="jumpa"></audio>
+<canvas></canvas>
+<img src="img/run1.png" alt="" class="per" hidden>
+<img src="img/run2.png" alt="" class="per" hidden>
+<img src="img/run3.png" alt="" class="per" hidden>
+<img src="img/run4.png" alt="" class="per" hidden>
+<img src="img/run5.png" alt="" class="per" hidden>
+<img src="img/run6.png" alt="" class="per" hidden>
+<img src="img/run7.png" alt="" class="per" hidden>
+<img src="img/run8.png" alt="" class="per" hidden>
+<img src="img/run9.png" alt="" class="per" hidden>
+<img src="img/run10.png" alt="" class="per" hidden>
+<img src="img/run11.png" alt="" class="per" hidden>
+
+
+
+<img src="img/h2.png" alt="" class="pics" hidden>
+<img src="img/h3.png" alt="" class="pics" hidden>
+<img src="img/h4.png" alt="" class="pics" hidden>
+<img src="img/h5.png" alt="" class="pics" hidden>
+<img src="img/h6.png" alt="" class="pics" hidden>
+
+
+<img src="img/run9.png" alt="" class="pic" hidden>
+<img src="img/run8.png" alt="" class="ting" hidden>
+
+<div class="start">
+    <div class="logo">
+        <div class="btn">START</div>
+    </div></div>
+<div class="end">
+    <div class="logos">
+        <div class="btn1">GAME OVER</div>
+    </div>
+</div>
+<ul class="life"></ul>
+<div class="score">SCORE
+<span class="fenshu">0</span>
+</div>
+<!--<div class="end">-->
+    <!--<div class="ends">GAME OVER</div>-->
+<!--</div>-->
+</body>
+</html>

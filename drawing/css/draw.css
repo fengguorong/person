@@ -1,0 +1,147 @@
+/*公共设置*/
+	body,html,a,li,ul{
+		margin:0;
+		padding:0;
+		list-style:none;
+		text-decoration: none;
+		color:#000;
+	}
+	body,html{
+		width:100%;
+		height:100%;
+		background:url("../img/71c58PICXzH.jpg") no-repeat;
+		background-size: cover;
+	}
+@font-face {
+	font-family: 'abc';
+	src: url('../font/iconfont.eot');
+	src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+	url('../font/iconfont.woff') format('woff'),
+	url('../font/iconfont.ttf') format('truetype'),
+	url('../font/iconfont.svg#iconfont') format('svg');
+}
+	li,span{
+		cursor:pointer;
+	}
+	li:hover,span:hover{
+		background:#68ACE7;
+	}
+	li:active,span:active{
+		background:#68ACE7;
+	}
+/*menu*/
+	.menu{
+		width:100%;
+		height:20%;
+		border-bottom:1px solid #999;
+		font-size: 14px;
+	}
+	.menus{
+		width:100%;border-bottom:1px solid #999;
+		
+	}
+	.menus:after{
+		content:"";
+		display:block;
+		clear:both;
+		position:relative;
+	}
+
+	.menus>li{
+		float:left;
+	    text-align:center;
+	    padding:0px 15px;
+	    height:30px;
+	    line-height: 30px;
+	    border-right:1px solid #999;
+	}
+	.menus>li>ul{
+	    position:absolute;
+	    top:22px;
+	    left:0px;
+	    display:none;
+	    background:#999;
+		width:100px;
+		height:150px;z-index:10001;overflow: hidden;
+	}
+	.menus>li>ul>li{
+		display: block;
+	}
+	.tuexit{
+		position:relative;
+	}
+/*画图工具*/
+    .draw:after{
+    	content:"";
+    	display:block;
+        clear:both;
+    }
+	.menu-list>span{
+		font-size: 16px;
+		font-weight: bold;
+
+	}
+    .draw>.menu-list{
+         float:left;
+         padding:10px 20px;
+		 height:105px;
+         border-right:1px solid #999;
+    }
+    .menu-list-con>.back{
+    	width:20px;
+    	height:20px;
+    }
+    .menu-list>span:hover,.menu-list:hover{
+    	background:#68ACE7;
+    }
+    .menu-list-con>.back>a{
+    	display:block;
+    	padding-top:10px;
+		font-family: "abc";
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		color: #999;
+    }
+.menu-list-con>.back>a:before{
+	content: "\e661";
+}
+    .menu-list-con{
+    	margin-top:10px;
+    }
+    .drawtool{
+    	width:100px;
+    }
+    .menu-list-con>li{
+    	display:inline-block;margin-right:10px;
+    	margin-top:5px;
+    }
+    .erasers{
+    	width:20px;height:20px;
+    	display:none;
+    	background:#ccc;
+    	position:absolute;
+    	left:500px;
+    	top:300px;
+    	z-index: 500;
+    }
+/*canvas*/
+    .canvas-box{
+    	width:100%;
+    	height:80%;
+    	background:#fff;
+    	margin:auto;
+    	position:relative;
+    }
+    .copy{
+    	position:absolute;
+    	top:0;
+    	left:0;
+    	z-index:1000;
+    }
+
+	.test{
+		width:200px;
+		height:200px;
+		background:#000;
+	}
